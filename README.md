@@ -7,7 +7,7 @@
 
 https://shortenerio.vercel.app/
 
-![App Screenshot]()
+![App Screenshot](https://arunshaw.vercel.app/static/media/shortner_3.92f73d326405da04b0c5.png)
 ## Tech Stack
 
 - HTML, CSS, JavaScript, NextJs, MongoDB
@@ -32,7 +32,7 @@ To run this project, you will need to add the following environment variables to
 
 Clone the project
 
-```  git clone https://link-to-project   ```
+```  git clone https://github.com/Arun-ez/shortner.io.git  ```
 
 ```  npm run dev  ```
 
