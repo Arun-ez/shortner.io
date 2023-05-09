@@ -1,0 +1,72 @@
+/* CSS for output box */
+.output {
+    width: 100%;
+    height: 100%;
+}
+
+.output {
+    display: flex;
+    align-items: center;
+}
+
+.output>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.url {
+    width: 100%;
+}
+
+.copy {
+    display: flex;
+    background-color: #a8a8a8;
+    width: 80px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.copy:hover {
+    color: white;
+    background-color: black;
+}
+
+
+/* CSS for Loading indicator */
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.loading-bar {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+    animation: loading 3s ease-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+        transform: translateX(-400px);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+}
