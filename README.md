@@ -9,7 +9,7 @@ shorten the huge urls into short links with shortner.io
 
 https://shortenerio.vercel.app/
 
-![App Screenshot](https://arunshaw.vercel.app/static/media/shortner_3.92f73d326405da04b0c5.png)
+![App Screenshot](https://shortenerio.vercel.app/thumbs/shortner_1.png)
 ## Tech Stack
 
 - HTML, CSS, JavaScript, NextJs, MongoDB
