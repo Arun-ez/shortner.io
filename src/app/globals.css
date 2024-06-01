@@ -6,8 +6,24 @@ h1 {
     align-items: center;
 }
 
+body {
+    margin: 0;
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.result {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.result img {
+    max-width: 500px;
 }

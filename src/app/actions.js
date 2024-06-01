@@ -5,10 +5,11 @@ import { UrlModel } from "../../models/Url.model";
 const GetData = async (key) => {
     try {
         await connectToDatabase();
-        let response = await UrlModel.findOne({ key: key });
-        return { success: response.origin };
+        const response = await UrlModel.findOne({ key: key });
+        if (response) return { success: true, url: response.origin }
+        return { success: false }
     } catch (error) {
-        throw new Error(error);
+        return { success: false }
     }
 }
 

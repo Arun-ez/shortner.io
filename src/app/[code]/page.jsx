@@ -1,28 +1,21 @@
-"use client"
-import { useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
 import { GetData } from '../actions';
+import { redirect } from 'next/navigation';
 
-const page = ({ params: { code } }) => {
+const page = async ({ params: { code } }) => {
 
-    const router = useRouter();
-    let message_ref = useRef(null);
+    const { success, url } = await GetData(code);
 
-    useEffect(() => {
-
-        message_ref.current.textContent = "redirecting ..."
-
-        GetData(code).then((response) => {
-            router.replace(response.success)
-        }).catch((error) => {
-            message_ref.current.textContent = "Invalid URL"
-        })
-
-    }, [code])
+    if (success) {
+        return redirect(url);
+    }
 
     return (
-        <div ref={message_ref}> redirecting ... </div>
+        <div className={'result'}>
+            <img src={'/not-found.svg'} alt="not-found" />
+            <h1> Inavlid Url </h1>
+        </div>
     )
+
 }
 
 export default page
